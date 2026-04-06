@@ -79,7 +79,7 @@ export default function Hero() {
 						Achieve your fitness goals with expert coaching, world-class
 						facilities, and a community that pushes you to your peak.
 					</p>
-					<div className="flex flex-wrap gap-4 items-center">
+					<div className="flex flex-wrap gap-4 items-center justify-center md:justify-start">
 						<a
 							href="#pricing"
 							className="bg-primary text-primary-foreground font-bold px-8 py-4 rounded-full hover:bg-accent transition-all duration-300 flex items-center gap-2 group text-sm md:text-lg"

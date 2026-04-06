@@ -68,11 +68,11 @@ export default function Navbar() {
                 </a>
               </li>
             ))}
-            <li>
+            <li className="">
               <a
                 href="#pricing"
                 onClick={() => setOpen(false)}
-                className="bg-primary text-primary-foreground font-bold text-sm px-6 py-2 rounded-full"
+                className=" bg-primary text-primary-foreground font-bold text-sm px-6 py-2  rounded-full"
               >
                 Join Now
               </a>
