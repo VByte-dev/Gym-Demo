@@ -1,4 +1,4 @@
-# Gym Website Demo
+# Gym Demo Website
 
 A sleek and responsive gym website template designed to give fitness businesses a professional online presence.
 
