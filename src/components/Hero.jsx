@@ -57,27 +57,28 @@ export default function Hero() {
 			id="home"
 			className="relative min-h-screen flex items-end overflow-hidden"
 		>
+			<div className="absolute left-10 top-24 h-32 w-32 rounded-full bg-primary/20 blur-3xl animate-blob-float opacity-70 pointer-events-none" />
+			<div className="absolute right-10 top-32 h-48 w-48 rounded-full bg-accent/20 blur-3xl animate-blob-float opacity-60 pointer-events-none" />
 			<img
-				src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600"
+				src="./stock/hero.jpg"
 				alt="Gym interior with modern equipment"
-				className="absolute inset-0 w-full h-full object-cover"
+				className="absolute inset-0 w-full h-full object-cover scale-x-[-1]"
 				loading="eager"
 			/>
 			<div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30" />
 
 			<div
 				ref={ref}
-				className="scroll-reveal relative z-10 max-w-7xl mx-auto px-6 pb-16 pt-32 w-full"
+				className="scroll-reveal relative z-10 max-w-7xl mx-auto px-6 pb-16 pt-32 w-full animate-fade-in-up"
 			>
 				<div className="mb-12">
 					<h1 className="font-display text-6xl md:text-9xl leading-[0.85] text-foreground mb-6">
-						Train Hard.
+						Train Stronger.
 						<br />
-						<span className="text-primary">Live Bold.</span>
+						<span className="text-primary">Live Better.</span>
 					</h1>
 					<p className="text-muted-foreground max-w-md mb-8 leading-relaxed text-md md:text-lg">
-						Achieve your fitness goals with expert coaching, world-class
-						facilities, and a community that pushes you to your peak.
+						With a 4.8-star rating from 59+ members, Seven Gym in Mathur, Chennai is built for results. If you’re ready to stop delaying and start transforming, this is where it begins.
 					</p>
 					<div className="flex flex-wrap gap-4 items-center justify-center md:justify-start">
 						<a

@@ -4,29 +4,29 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const testimonials = [
 	{
-		name: 'Olivia R.',
-		tag: 'Lost 20kg in 90 days',
+		name: 'Sandy Shaik',
+		tag: '7 months ago · 5/5',
 		quote:
-			'PulseFit changed my life. The coaches kept me accountable and the community made every session something I looked forward to.',
-		img: 'https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=800',
+			'Good trainer and friendly teaching master. Must visit to join this gym.',
+		img: './stock/testi1.jpg',
 		stat: '-20kg',
 		duration: '90 days',
 	},
 	{
-		name: 'Marcus J.',
-		tag: 'Gained 8kg of muscle in 6 months',
+		name: 'Joseph',
+		tag: '4 years ago · 5/5',
 		quote:
-			'The personal training program was exactly what I needed. Customized workouts, nutrition guidance, and real results I can see in the mirror.',
-		img: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800',
+			'Only a few legendary masters in Tamil Nadu, and their lead coach is one of them. Such a humble, down-to-earth person. Very proud to be part of this gym.',
+		img: './stock/testi2.jpg',
 		stat: '+8kg',
 		duration: '6 months',
 	},
 	{
-		name: 'Sarah K.',
-		tag: 'Completed first marathon',
+		name: 'Prabhu S',
+		tag: 'Local Guide · 64 reviews',
 		quote:
-			'I went from barely running a mile to finishing a full marathon. The trainers built a program that pushed me without breaking me.',
-		img: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800',
+			'Flexible and user-friendly gym. Easy access and usage of equipment without much restrictions. Guidance is available at all times.',
+		img: './stock/testi3.jpg',
 		stat: '42km',
 		duration: '8 months',
 	},
@@ -53,7 +53,7 @@ export default function Testimonials() {
 	const [countValues, setCountValues] = useState(stats.map(() => 0));
 	const ref = useScrollReveal();
 	const statsRef = useRef(null);
-	const hasAnimated = useRef(false);
+		const hasAnimated = useRef(false);
 
 	useEffect(() => {
 		const interval = setInterval(() => {
@@ -149,7 +149,7 @@ export default function Testimonials() {
 				</div>
 
 				{/* Main testimonial card */}
-				<div className="grid md:grid-cols-5 gap-0 rounded-3xl overflow-hidden bg-card border border-border">
+				<div className="grid md:grid-cols-5 gap-0 rounded-3xl overflow-hidden bg-gradient-to-br from-black via-neutral-900 to-black border border-border h-[34rem] md:h-[32rem] animate-fade-in-up transition-transform duration-500 hover:-translate-y-1 shadow-2xl shadow-black/30">
 					{/* Image - 2 cols */}
 					<div className="md:col-span-2 relative">
 						<img
@@ -161,7 +161,7 @@ export default function Testimonials() {
 							loading="lazy"
 						/>
 						{/* Result badge */}
-						<div className="absolute top-4 left-4 bg-primary text-primary-foreground px-4 py-2 rounded-full flex items-center gap-2">
+						<div className="absolute top-4 left-4 bg-amber-400 text--950 px-4 py-2 rounded-full flex items-center gap-2">
 							<TrendingUp size={16} />
 							<span className="font-bold text-sm">{t.stat}</span>
 							<span className="text-xs opacity-80">in {t.duration}</span>
@@ -170,15 +170,15 @@ export default function Testimonials() {
 
 					{/* Content - 3 cols */}
 					<div
-						className={`md:col-span-3 p-8 md:p-12 flex flex-col justify-between transition-opacity duration-500 ${
-							isAnimating ? 'opacity-0' : 'opacity-100'
-						}`}
+						className={`md:col-span-3 p-8 md:p-12 flex h-full flex-col justify-between transition-opacity duration-500 ${
+						isAnimating ? 'opacity-0' : 'opacity-100'
+					}`}
 					>
 						<div>
-							<Quote size={40} className="text-primary/20 mb-4" />
+							<Quote size={40} className="text-amber-300/40 mb-4" />
 							<div className="flex gap-1 mb-4">
 								{[...Array(5)].map((_, i) => (
-									<Star key={i} size={18} className="text-primary fill-primary" />
+									<Star key={i} size={18} className="text-amber-400 fill-amber-400" />
 								))}
 							</div>
 							<blockquote className="text-foreground text-xl md:text-2xl leading-relaxed mb-8 font-light">
@@ -189,7 +189,7 @@ export default function Testimonials() {
 						<div className="flex items-center justify-between border-t border-border pt-6">
 							<div>
 								<p className="text-foreground font-semibold text-lg">{t.name}</p>
-								<p className="text-primary text-sm uppercase tracking-widest">
+								<p className="text-amber-400 text-sm uppercase tracking-widest">
 									{t.tag}
 								</p>
 							</div>
@@ -207,7 +207,7 @@ export default function Testimonials() {
 										}}
 										className={`h-2 rounded-full transition-all duration-300 ${
 											i === current
-												? 'w-8 bg-primary'
+												? 'w-8 bg-amber-400'
 												: 'w-2 bg-border hover:bg-muted-foreground'
 										}`}
 										aria-label={`Go to testimonial ${i + 1}`}

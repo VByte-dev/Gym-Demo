@@ -12,7 +12,7 @@ export default function TaglineBanner() {
   const ref = useScrollReveal();
 
   return (
-    <section className="relative py-8 overflow-hidden bg-primary">
+    <section ref={ref} className="relative py-8 overflow-hidden bg-primary scroll-reveal">
       {/* Scrolling marquee */}
       <div className="flex whitespace-nowrap">
         <div className="animate-marquee flex items-center gap-8">

@@ -11,10 +11,10 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 const features = [
   { icon: CheckCircle, title: 'Certified & Experienced Coaches', desc: 'Every trainer is nationally certified with 5+ years of hands-on experience.' },
   { icon: Dumbbell, title: 'Premium Equipment', desc: 'Top-of-the-line machines and free weights from leading fitness brands.' },
-  { icon: Clock, title: 'Open 24/7', desc: 'Train on your schedule — our doors never close, day or night.' },
+  { icon: Clock, title: 'Open Daily', desc: 'Open daily through 10:30 PM so you can train after work or on weekends.' },
   { icon: Users, title: 'Supportive Community', desc: 'Join a tribe of like-minded people who push each other forward.' },
   { icon: BarChart3, title: 'Progress Tracking', desc: 'Smart dashboards and body composition scans to track your transformation.' },
-  { icon: Star, title: 'Five-Star Experience', desc: 'From locker rooms to smoothie bars — every detail is designed for you.' },
+  { icon: Star, title: 'Five-Star Experience', desc: 'From locker rooms to smoothie bars, every detail is designed for you.' },
 ];
 
 export default function WhyChooseUs() {
@@ -40,7 +40,7 @@ export default function WhyChooseUs() {
           {features.map((f, i) => (
             <div
               key={f.title}
-              className={`bg-card rounded-2xl p-6 border border-border hover:border-primary/40 transition-all duration-300 ${
+              className={`bg-gradient-to-br from-black via-neutral-900 to-black rounded-2xl p-6 border border-border hover:border-primary/40 transition-all duration-300 ${
                 i === 0 ? 'sm:col-span-2 sm:flex sm:items-center sm:gap-6' :
                 i === 3 ? 'sm:col-span-2 sm:flex sm:items-center sm:gap-6' : ''
               }`}

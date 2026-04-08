@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
-const links = ["Home", "Features", "Program", "Trainers", "Pricing"];
+const links = ["Home", "Features", "Programs", "Trainers", "Pricing"];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -15,15 +15,15 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 md:bg-transparent transition-all
+      className={`fixed top-0 left-0 w-full z-50 md:bg-transparent transition-all duration-500 ease-out
          ${
         scrolled ? "backdrop-blur-md" : ""
       } ${open ? "bg-background/95" : ""}`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
-        <span className="font-display text-3xl text-foreground tracking-wider">
-          PulseFit
-        </span>
+          <span className="font-display text-3xl text-foreground tracking-wider">
+            Seven Gym
+          </span>
 
         <ul className="hidden md:flex items-center gap-8">
           {links.map((l) => (
@@ -55,7 +55,7 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="md:hidden bg-background/95 backdrop-blur-md border-t border-border">
+        <div className="md:hidden bg-background/95 backdrop-blur-md border-t border-border animate-fade-in-down">
           <ul className="flex flex-col items-center gap-6 py-8">
             {links.map((l) => (
               <li key={l}>
@@ -68,11 +68,11 @@ export default function Navbar() {
                 </a>
               </li>
             ))}
-            <li className="">
+            <li className="w-full px-6">
               <a
                 href="#pricing"
                 onClick={() => setOpen(false)}
-                className=" bg-primary text-primary-foreground font-bold text-sm px-6 py-2  rounded-full"
+                className="w-full text-center bg-primary text-primary-foreground font-bold text-sm px-6 py-2 rounded-full block hover:bg-accent transition-all duration-300"
               >
                 Join Now
               </a>
